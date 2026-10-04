@@ -1,0 +1,2793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Letter For You ♡</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background-color: #ffe8ef;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(239,157,180,0.30) 4px,
+            transparent 4px
+        );
+
+    background-size: 45px 45px;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.bg-decoration {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+
+    color: #df91a8;
+    opacity: 0.35;
+
+    animation:
+        decorationFloat 6s ease-in-out infinite;
+}
+
+.sparkle {
+    font-family: Georgia, serif;
+    font-size: 24px;
+}
+
+.sparkle1 {
+    left: 15%;
+    top: 24%;
+}
+
+.sparkle2 {
+    right: 14%;
+    top: 28%;
+    font-size: 18px;
+    animation-delay: 1.5s;
+}
+
+.sparkle3 {
+    left: 25%;
+    bottom: 25%;
+    font-size: 17px;
+    animation-delay: 3s;
+}
+
+.sparkle4 {
+    right: 24%;
+    bottom: 27%;
+    font-size: 25px;
+    animation-delay: 2s;
+}
+
+.flower {
+    font-size: 23px;
+}
+
+.flower1 {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-10deg);
+}
+
+.flower2 {
+    right: 10%;
+    top: 47%;
+    transform: rotate(10deg);
+    animation-delay: 2s;
+}
+
+.flower3 {
+    left: 28%;
+    bottom: 10%;
+    font-size: 17px;
+    animation-delay: 3s;
+}
+
+.flower4 {
+    right: 28%;
+    bottom: 12%;
+    font-size: 18px;
+    animation-delay: 4s;
+}
+
+@keyframes decorationFloat {
+
+    0%, 100% {
+        margin-top: 0;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        margin-top: -8px;
+        transform: rotate(6deg);
+    }
+}
+
+
+/* =========================================================
+   CUTE BACKGROUND CHARACTERS
+========================================================= */
+
+.background-character {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+
+    opacity: 0.27;
+
+    animation:
+        characterFloat 7s ease-in-out infinite;
+}
+
+.character-1 {
+    left: 3%;
+    top: 9%;
+    transform: rotate(-8deg) scale(.9);
+}
+
+.character-2 {
+    right: 4%;
+    top: 11%;
+    transform: rotate(7deg) scale(.78);
+    animation-delay: 1.3s;
+}
+
+.character-3 {
+    left: 3%;
+    bottom: 9%;
+    transform: rotate(5deg) scale(.82);
+    animation-delay: 2.3s;
+}
+
+.character-4 {
+    right: 3%;
+    bottom: 8%;
+    transform: rotate(-7deg) scale(.88);
+    animation-delay: 3.2s;
+}
+
+.character-5 {
+    left: 21%;
+    top: 4%;
+    transform: rotate(-5deg) scale(.55);
+    animation-delay: 1s;
+}
+
+.character-6 {
+    right: 21%;
+    top: 5%;
+    transform: rotate(6deg) scale(.55);
+    animation-delay: 4s;
+}
+
+.character-7 {
+    left: 17%;
+    bottom: 4%;
+    transform: rotate(-6deg) scale(.55);
+    animation-delay: 2.8s;
+}
+
+.character-8 {
+    right: 17%;
+    bottom: 4%;
+    transform: rotate(5deg) scale(.6);
+    animation-delay: 4.5s;
+}
+
+
+.chibi {
+    position: relative;
+    width: 82px;
+    height: 95px;
+}
+
+.chibi-head {
+    position: absolute;
+
+    left: 50%;
+    top: 10px;
+
+    width: 67px;
+    height: 59px;
+
+    transform: translateX(-50%);
+
+    background: #fff9f4;
+
+    border: 3px solid #dca7b5;
+
+    border-radius: 48% 48% 45% 45%;
+
+    box-shadow:
+        0 5px 10px rgba(160,90,110,.10);
+}
+
+.chibi-ear {
+    position: absolute;
+
+    top: -13px;
+
+    width: 25px;
+    height: 31px;
+
+    background: #fff9f4;
+
+    border: 3px solid #dca7b5;
+
+    border-radius: 60% 60% 45% 45%;
+
+    z-index: -1;
+}
+
+.chibi-ear.left {
+    left: 2px;
+    transform: rotate(-20deg);
+}
+
+.chibi-ear.right {
+    right: 2px;
+    transform: rotate(20deg);
+}
+
+.chibi-eye {
+    position: absolute;
+
+    width: 6px;
+    height: 8px;
+
+    top: 25px;
+
+    background: #77545d;
+
+    border-radius: 50%;
+}
+
+.chibi-eye.left {
+    left: 19px;
+}
+
+.chibi-eye.right {
+    right: 19px;
+}
+
+.chibi-blush {
+    position: absolute;
+
+    top: 34px;
+
+    width: 12px;
+    height: 6px;
+
+    background: #eea6b9;
+
+    opacity: .75;
+
+    border-radius: 50%;
+}
+
+.chibi-blush.left {
+    left: 8px;
+}
+
+.chibi-blush.right {
+    right: 8px;
+}
+
+.chibi-mouth {
+    position: absolute;
+
+    left: 50%;
+    top: 34px;
+
+    width: 8px;
+    height: 5px;
+
+    transform: translateX(-50%);
+
+    border-bottom:
+        2px solid #77545d;
+
+    border-radius:
+        0 0 50% 50%;
+}
+
+.chibi-body {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 48px;
+    height: 36px;
+
+    transform: translateX(-50%);
+
+    background: #f7b7c8;
+
+    border: 3px solid #dca7b5;
+
+    border-radius:
+        50% 50% 40% 40%;
+}
+
+.chibi-arm {
+    position: absolute;
+
+    top: 59px;
+
+    width: 15px;
+    height: 9px;
+
+    background: #f7b7c8;
+
+    border: 2px solid #dca7b5;
+
+    border-radius: 50%;
+}
+
+.chibi-arm.left {
+    left: 7px;
+    transform: rotate(25deg);
+}
+
+.chibi-arm.right {
+    right: 7px;
+    transform: rotate(-25deg);
+}
+
+.chibi-foot {
+    position: absolute;
+
+    bottom: -2px;
+
+    width: 17px;
+    height: 9px;
+
+    background: #f7b7c8;
+
+    border: 2px solid #dca7b5;
+
+    border-radius: 50%;
+}
+
+.chibi-foot.left {
+    left: 16px;
+}
+
+.chibi-foot.right {
+    right: 16px;
+}
+
+.mini-heart {
+    position: absolute;
+
+    left: 50%;
+    top: 56px;
+
+    transform: translateX(-50%);
+
+    color: #df829d;
+
+    font-size: 17px;
+
+    z-index: 5;
+}
+
+.sleepy .chibi-eye {
+    height: 3px;
+    top: 28px;
+}
+
+.wink .chibi-eye.right {
+    height: 3px;
+    top: 28px;
+}
+
+.character-2 .chibi-body,
+.character-2 .chibi-foot,
+.character-2 .chibi-arm {
+    background: #f5d5a7;
+}
+
+.character-3 .chibi-body,
+.character-3 .chibi-foot,
+.character-3 .chibi-arm {
+    background: #c9dff2;
+}
+
+.character-4 .chibi-body,
+.character-4 .chibi-foot,
+.character-4 .chibi-arm {
+    background: #d9c8ef;
+}
+
+.character-5 .chibi-body,
+.character-5 .chibi-foot,
+.character-5 .chibi-arm {
+    background: #f3c8a8;
+}
+
+.character-6 .chibi-body,
+.character-6 .chibi-foot,
+.character-6 .chibi-arm {
+    background: #bfe1d0;
+}
+
+.character-7 .chibi-body,
+.character-7 .chibi-foot,
+.character-7 .chibi-arm {
+    background: #f6c2d4;
+}
+
+.character-8 .chibi-body,
+.character-8 .chibi-foot,
+.character-8 .chibi-arm {
+    background: #e8d39f;
+}
+
+.waving .chibi-arm.right {
+    top: 52px;
+
+    transform:
+        rotate(-55deg);
+
+    animation:
+        wave 1.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+    0%, 100% {
+        transform: rotate(-55deg);
+    }
+
+    50% {
+        transform: rotate(-85deg);
+    }
+}
+
+@keyframes characterFloat {
+
+    0%, 100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -12px;
+    }
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+    position: absolute;
+
+    color: #d97891;
+
+    opacity: .35;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation:
+        float 6s ease-in-out infinite;
+}
+
+.heart1 {
+    left: 7%;
+    top: 16%;
+    font-size: 38px;
+}
+
+.heart2 {
+    right: 7%;
+    top: 19%;
+    font-size: 31px;
+    animation-delay: 1.5s;
+}
+
+.heart3 {
+    left: 11%;
+    bottom: 17%;
+    font-size: 29px;
+    animation-delay: 2.5s;
+}
+
+.heart4 {
+    right: 11%;
+    bottom: 14%;
+    font-size: 40px;
+    animation-delay: 3.5s;
+}
+
+.heart5 {
+    left: 25%;
+    top: 8%;
+    font-size: 25px;
+    animation-delay: 1s;
+}
+
+.heart6 {
+    right: 25%;
+    top: 10%;
+    font-size: 27px;
+    animation-delay: 4s;
+}
+
+.heart7 {
+    left: 5%;
+    bottom: 37%;
+    font-size: 24px;
+    animation-delay: 2s;
+}
+
+.heart8 {
+    right: 5%;
+    bottom: 35%;
+    font-size: 26px;
+    animation-delay: 5s;
+}
+
+@keyframes float {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-6deg);
+    }
+
+    50% {
+        transform:
+            translateY(-16px)
+            rotate(6deg);
+    }
+}
+
+
+/* =========================================================
+   SMOOTH HEART EXPLOSION
+========================================================= */
+
+.heart-burst {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 1px;
+    height: 1px;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+.burst-heart {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    color: #d95f83;
+
+    font-size: 58px;
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    text-shadow:
+        0 3px 8px
+        rgba(190,75,105,.25);
+
+    transform:
+        translate(-50%, -50%)
+        scale(.2);
+
+    will-change:
+        transform,
+        opacity;
+}
+
+.opened .burst-heart {
+
+    animation:
+        smoothBurst 2s
+        cubic-bezier(.16,1,.3,1)
+        forwards;
+}
+
+
+.burst-heart:nth-child(1) {
+    --x: -190px;
+    --y: -150px;
+    animation-delay: .00s;
+}
+
+.burst-heart:nth-child(2) {
+    --x: 175px;
+    --y: -165px;
+    animation-delay: .07s;
+}
+
+.burst-heart:nth-child(3) {
+    --x: -225px;
+    --y: -45px;
+    animation-delay: .12s;
+}
+
+.burst-heart:nth-child(4) {
+    --x: 225px;
+    --y: -60px;
+    animation-delay: .17s;
+}
+
+.burst-heart:nth-child(5) {
+    --x: -125px;
+    --y: -220px;
+    animation-delay: .05s;
+}
+
+.burst-heart:nth-child(6) {
+    --x: 115px;
+    --y: -225px;
+    animation-delay: .10s;
+}
+
+.burst-heart:nth-child(7) {
+    --x: -260px;
+    --y: -115px;
+    animation-delay: .15s;
+}
+
+.burst-heart:nth-child(8) {
+    --x: 260px;
+    --y: -125px;
+    animation-delay: .22s;
+}
+
+
+@keyframes smoothBurst {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.2);
+    }
+
+    12% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.15);
+    }
+
+    25% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * .18),
+                calc(-50% + var(--y) * .18)
+            )
+            scale(.95);
+    }
+
+    55% {
+
+        opacity: .95;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * .58),
+                calc(-50% + var(--y) * .58)
+            )
+            scale(.88);
+    }
+
+    78% {
+
+        opacity: .65;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * .84),
+                calc(-50% + var(--y) * .84)
+            )
+            scale(.82);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(.72);
+    }
+}
+
+
+/* =========================================================
+   PASSWORD SCREEN
+========================================================= */
+
+.password-screen {
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(90vw, 400px);
+
+    min-height: 500px;
+
+    padding: 30px 24px;
+
+    transform:
+        translate(-50%,-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        rgba(255,250,250,.97);
+
+    border-radius: 28px;
+
+    border:
+        2px solid
+        rgba(229,160,177,.35);
+
+    box-shadow:
+        0 18px 40px
+        rgba(170,75,95,.15);
+
+    z-index: 30;
+
+    animation:
+        passwordFadeIn .8s ease;
+}
+
+
+.password-heart {
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin:
+        0 auto 16px;
+
+    color: #d97891;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(233,165,181,.25);
+
+    animation:
+        heartbeat 2.2s
+        ease-in-out infinite;
+}
+
+
+.password-screen h1 {
+
+    width: 100%;
+
+    margin: 0;
+
+    color: #a94d67;
+
+    font-size:
+        clamp(29px,7vw,42px);
+
+    font-weight: normal;
+
+    line-height: 1.15;
+
+    text-align: center;
+}
+
+
+.password-subtitle {
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    color: #a96b7b;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+
+    text-align: center;
+}
+
+
+.password-hint {
+
+    width: 100%;
+
+    margin-top: 8px;
+
+    margin-bottom: 22px;
+
+    color: #bd7b8e;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    line-height: 1.3;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LOCK
+========================================================= */
+
+.lock-container {
+
+    position: relative;
+
+    width: 110px;
+    height: 120px;
+
+    margin:
+        0 auto 20px;
+
+    flex-shrink: 0;
+}
+
+
+.lock-shackle {
+
+    position: absolute;
+
+    left: 50%;
+    top: 5px;
+
+    width: 58px;
+    height: 62px;
+
+    transform:
+        translateX(-50%);
+
+    border:
+        11px solid #d27d91;
+
+    border-bottom: none;
+
+    border-radius:
+        32px 32px 0 0;
+
+    transform-origin:
+        75% 90%;
+
+    z-index: 2;
+
+    transition:
+        transform .7s
+        cubic-bezier(.2,.8,.2,1),
+        opacity .4s ease;
+}
+
+
+.lock-body {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 80px;
+    height: 68px;
+
+    transform:
+        translateX(-50%);
+
+    background: #e59bad;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 9px 18px
+        rgba(170,75,95,.25);
+
+    z-index: 3;
+}
+
+
+.keyhole {
+
+    position: absolute;
+
+    left: 50%;
+    top: 25px;
+
+    width: 11px;
+    height: 19px;
+
+    transform:
+        translateX(-50%);
+
+    background: #a94d67;
+
+    border-radius: 8px;
+
+    z-index: 4;
+}
+
+
+.keyhole::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: -5px;
+
+    width: 18px;
+    height: 18px;
+
+    transform:
+        translateX(-50%);
+
+    background: #a94d67;
+
+    border-radius: 50%;
+}
+
+
+.password-screen.unlocking
+.lock-shackle {
+
+    transform:
+        translateX(-50%)
+        rotate(38deg)
+        translateY(-8px);
+
+    opacity: 0;
+}
+
+
+.password-screen.unlocking
+.lock-body {
+
+    animation:
+        lockPop .7s ease forwards;
+}
+
+
+@keyframes lockPop {
+
+    0% {
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+
+    30% {
+        transform:
+            translateX(-50%)
+            scale(1.08)
+            rotate(-3deg);
+    }
+
+    100% {
+        transform:
+            translateX(-50%)
+            scale(.8)
+            translateY(-35px);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   PASSWORD INPUT
+========================================================= */
+
+.password-input {
+
+    display: block;
+
+    width: 190px;
+    height: 48px;
+
+    margin: 0 auto;
+
+    padding:
+        10px 18px;
+
+    border:
+        2px solid #e5a0b1;
+
+    border-radius: 25px;
+
+    outline: none;
+
+    background: white;
+
+    color: #a94d67;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    letter-spacing: 7px;
+}
+
+
+.password-input:focus {
+
+    border-color: #d97891;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(217,120,145,.12);
+}
+
+
+.password-input::placeholder {
+
+    color: #c58a9a;
+
+    letter-spacing: 2px;
+}
+
+
+.password-button,
+.open-letter-button {
+
+    border: none;
+
+    background: #d9879b;
+
+    color: white;
+
+    padding:
+        13px 29px;
+
+    border-radius: 30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px
+        rgba(180,85,105,.22);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.password-button {
+
+    display: block;
+
+    margin:
+        14px auto 0;
+}
+
+
+.password-button:hover,
+.open-letter-button:hover {
+
+    background: #cf758d;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 23px
+        rgba(180,85,105,.28);
+}
+
+
+.password-button:active,
+.open-letter-button:active {
+
+    transform:
+        scale(.94);
+}
+
+
+.wrong-password {
+
+    height: 18px;
+
+    margin-top: 9px;
+
+    color: #c65f78;
+
+    font-size: 14px;
+
+    opacity: 0;
+}
+
+
+.wrong-password.show {
+    opacity: 1;
+}
+
+
+.password-input.shake {
+    animation:
+        shake .4s ease;
+}
+
+
+@keyframes shake {
+
+    0%,100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    75% {
+        transform: translateX(8px);
+    }
+}
+
+
+@keyframes passwordFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translate(-50%,-47%);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translate(-50%,-50%);
+    }
+}
+
+
+/* =========================================================
+   OPENING SCREEN
+========================================================= */
+
+.opening {
+
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.opening.visible {
+
+    pointer-events: auto;
+
+    animation:
+        fadeIn 1s ease forwards;
+}
+
+
+.small-heart {
+
+    width: 48px;
+    height: 48px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    color: #d97891;
+
+    background: #fffafa;
+
+    border-radius: 50%;
+
+    font-size: 29px;
+
+    animation:
+        heartbeat 2.2s
+        ease-in-out infinite;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(255,250,250,.7);
+}
+
+
+.opening h1 {
+
+    margin: 0;
+
+    color: #a94d67;
+
+    font-size:
+        clamp(30px,7vw,46px);
+
+    font-weight: normal;
+
+    text-shadow:
+        0 2px 8px
+        rgba(169,77,103,.15);
+}
+
+
+.subtitle {
+
+    margin-top: 10px;
+
+    margin-bottom: 42px;
+
+    color: #a96b7b;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope-wrapper {
+
+    position: relative;
+
+    width: 280px;
+    height: 190px;
+
+    margin:
+        0 auto 38px;
+
+    cursor: pointer;
+
+    filter:
+        drop-shadow(
+            0 18px 20px
+            rgba(160,75,95,.20)
+        );
+
+    transition:
+        transform .3s ease;
+
+    z-index: 10;
+}
+
+
+.envelope-wrapper:hover {
+    transform: translateY(-6px);
+}
+
+
+.envelope-wrapper:active {
+    transform: scale(.97);
+}
+
+
+.envelope {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: #f5b8c7;
+
+    border-radius: 10px;
+
+    overflow: visible;
+
+    z-index: 2;
+}
+
+
+.envelope::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left:
+        140px solid #eaa4b5;
+
+    border-top:
+        95px solid transparent;
+
+    border-bottom:
+        95px solid transparent;
+
+    z-index: 4;
+}
+
+
+.envelope::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-right:
+        140px solid #eaa4b5;
+
+    border-top:
+        95px solid transparent;
+
+    border-bottom:
+        95px solid transparent;
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   RIBBON
+========================================================= */
+
+.ribbon-vertical {
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 18px;
+    height: 100%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(255,255,255,.18);
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.ribbon-bow {
+
+    position: absolute;
+
+    left: 50%;
+    top: -17px;
+
+    width: 68px;
+    height: 38px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 9;
+
+    pointer-events: none;
+
+    transition:
+        transform .5s ease,
+        opacity .5s ease;
+}
+
+
+.ribbon-loop {
+
+    position: absolute;
+
+    top: 5px;
+
+    width: 34px;
+    height: 27px;
+
+    background: #e58ca3;
+
+    border:
+        2px solid #d77993;
+
+    border-radius:
+        70% 40% 70% 40%;
+}
+
+
+.ribbon-loop.left {
+    left: 0;
+    transform: rotate(-24deg);
+}
+
+.ribbon-loop.right {
+    right: 0;
+
+    transform:
+        rotate(24deg)
+        scaleX(-1);
+}
+
+
+.ribbon-knot {
+
+    position: absolute;
+
+    left: 50%;
+    top: 10px;
+
+    width: 19px;
+    height: 19px;
+
+    transform:
+        translateX(-50%);
+
+    background: #d97891;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 2px 4px
+        rgba(150,60,85,.20);
+}
+
+
+.opened .ribbon-bow {
+
+    transform:
+        translateX(-50%)
+        translateY(-7px)
+        scale(.8);
+
+    opacity: 0;
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.inside-letter {
+
+    position: absolute;
+
+    left: 50%;
+    top: 20px;
+
+    width: 380px;
+
+    max-width: 92vw;
+
+    max-height: 70vh;
+
+    padding:
+        25px 28px;
+
+    background: #fff0ad;
+
+    border-radius: 8px;
+
+    z-index: 3;
+
+    box-shadow:
+        0 7px 18px
+        rgba(130,90,40,.20);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+    transition:
+        transform 1.15s
+        cubic-bezier(.2,.8,.2,1),
+        opacity .4s ease;
+
+    text-align: left;
+
+    color: #79545a;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    background-image:
+        radial-gradient(
+            rgba(210,170,80,.18) 1px,
+            transparent 1px
+        );
+
+    background-size: 15px 15px;
+}
+
+
+.inside-letter p {
+
+    margin:
+        0 0 15px;
+}
+
+
+.inside-letter p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.letter-greeting {
+
+    font-size: 18px;
+
+    color: #a94d67;
+
+    margin-bottom:
+        17px !important;
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.letter-signature {
+
+    margin-top: 25px !important;
+
+    text-align: right;
+
+    color: #a94d67;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+
+.inside-letter::after {
+
+    content: "♡";
+
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        8px 0 0 auto;
+
+    color: #df94a6;
+
+    font-size: 23px;
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   FOR YOU STAMP
+========================================================= */
+
+.for-you {
+
+    position: absolute;
+
+    right: 15px;
+    bottom: 13px;
+
+    padding:
+        4px 9px;
+
+    border:
+        1.5px dashed
+        rgba(255,255,255,.75);
+
+    border-radius: 7px;
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    transform:
+        rotate(-5deg);
+
+    opacity: .85;
+
+    z-index: 7;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FLAP
+========================================================= */
+
+.flap {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left:
+        140px solid transparent;
+
+    border-right:
+        140px solid transparent;
+
+    border-top:
+        100px solid #f8ccd6;
+
+    transform-origin:
+        top center;
+
+    z-index: 6;
+
+    transition:
+        transform .9s
+        cubic-bezier(.2,.8,.2,1),
+        z-index 0s .45s;
+}
+
+
+/* =========================================================
+   HEART SEAL
+========================================================= */
+
+.seal {
+
+    position: absolute;
+
+    left: 50%;
+    top: 94px;
+
+    transform:
+        translate(-50%,-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #dc8098;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+
+    z-index: 8;
+
+    box-shadow:
+        0 4px 10px
+        rgba(170,75,95,.30);
+
+    transition:
+        opacity .3s ease,
+        transform .5s ease;
+}
+
+
+.seal::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    font-size: 13px;
+
+    opacity: .5;
+}
+
+
+.opened .flap {
+
+    transform:
+        rotateX(180deg);
+
+    z-index: 1;
+}
+
+
+.opened .inside-letter {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(-210px);
+
+    transition-delay:
+        .55s;
+
+    z-index: 7;
+}
+
+
+.opened .seal {
+
+    opacity: 0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.4);
+}
+
+
+/* =========================================================
+   OPEN BUTTON
+========================================================= */
+
+.open-letter-button {
+
+    display: block;
+
+    margin:
+        0 auto;
+
+    padding:
+        14px 30px;
+}
+
+
+/* =========================================================
+   GENERAL ANIMATIONS
+========================================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px) {
+
+    .password-screen {
+
+        left: 50%;
+        top: 50%;
+
+        width: 90vw;
+
+        min-height: 480px;
+
+        padding:
+            24px 18px;
+
+        transform:
+            translate(-50%,-50%);
+    }
+
+
+    .password-screen h1 {
+        font-size: 29px;
+    }
+
+
+    .password-subtitle {
+        font-size: 15px;
+    }
+
+
+    .password-hint {
+        font-size: 13px;
+    }
+
+
+    .envelope-wrapper {
+
+        width: 250px;
+        height: 170px;
+    }
+
+
+    .envelope::before {
+
+        border-left-width: 125px;
+
+        border-top-width: 85px;
+
+        border-bottom-width: 85px;
+    }
+
+
+    .envelope::after {
+
+        border-right-width: 125px;
+
+        border-top-width: 85px;
+
+        border-bottom-width: 85px;
+    }
+
+
+    .flap {
+
+        border-left-width: 125px;
+
+        border-right-width: 125px;
+
+        border-top-width: 90px;
+    }
+
+
+    .inside-letter {
+
+        width: 92vw;
+
+        max-width: 380px;
+
+        max-height: 70vh;
+
+        padding:
+            23px 24px;
+
+        font-size: 12.5px;
+
+        line-height: 1.48;
+    }
+
+
+    .letter-greeting {
+        font-size: 17px;
+    }
+
+
+    .inside-letter p {
+        margin-bottom: 13px;
+    }
+
+
+    .letter-signature {
+        font-size: 12px;
+        margin-top: 22px !important;
+    }
+
+
+    .opened .inside-letter {
+
+        transform:
+            translateX(-50%)
+            translateY(-205px);
+    }
+
+
+    .subtitle {
+
+        font-size: 15px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .floating-heart {
+        opacity: .30;
+    }
+
+
+    .background-character {
+        opacity: .21;
+    }
+
+
+    .character-1 {
+        left: -6%;
+        top: 8%;
+        transform: scale(.62);
+    }
+
+
+    .character-2 {
+        right: -7%;
+        top: 10%;
+        transform: scale(.56);
+    }
+
+
+    .character-3 {
+        left: -7%;
+        bottom: 7%;
+        transform: scale(.60);
+    }
+
+
+    .character-4 {
+        right: -7%;
+        bottom: 6%;
+        transform: scale(.63);
+    }
+
+
+    .character-5,
+    .character-6,
+    .character-7,
+    .character-8 {
+        display: none;
+    }
+
+
+    .bg-decoration {
+        opacity: .25;
+    }
+
+
+    .heart5,
+    .heart6,
+    .heart7,
+    .heart8 {
+        display: none;
+    }
+
+
+    /* MOBILE HEART EXPLOSION */
+
+    .burst-heart {
+        font-size: 43px;
+    }
+
+
+    .burst-heart:nth-child(1) {
+        --x: -125px;
+        --y: -120px;
+    }
+
+    .burst-heart:nth-child(2) {
+        --x: 115px;
+        --y: -130px;
+    }
+
+    .burst-heart:nth-child(3) {
+        --x: -145px;
+        --y: -35px;
+    }
+
+    .burst-heart:nth-child(4) {
+        --x: 145px;
+        --y: -45px;
+    }
+
+    .burst-heart:nth-child(5) {
+        --x: -80px;
+        --y: -165px;
+    }
+
+    .burst-heart:nth-child(6) {
+        --x: 75px;
+        --y: -170px;
+    }
+
+    .burst-heart:nth-child(7) {
+        --x: -165px;
+        --y: -90px;
+    }
+
+    .burst-heart:nth-child(8) {
+        --x: 165px;
+        --y: -95px;
+    }
+
+}
+
+
+@media(max-height:700px) {
+
+    .password-screen {
+
+        min-height: 0;
+
+        padding: 18px;
+    }
+
+
+    .password-heart {
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 29px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .password-screen h1 {
+        font-size: 27px;
+    }
+
+
+    .password-hint {
+        margin-bottom: 12px;
+    }
+
+
+    .lock-container {
+
+        transform: scale(.85);
+
+        margin-bottom: 8px;
+    }
+
+
+    .inside-letter {
+        max-height: 65vh;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND DECORATIONS
+===================================================== -->
+
+<div class="bg-decoration sparkle sparkle1">✦</div>
+<div class="bg-decoration sparkle sparkle2">✧</div>
+<div class="bg-decoration sparkle sparkle3">✦</div>
+<div class="bg-decoration sparkle sparkle4">✧</div>
+
+<div class="bg-decoration flower flower1">✿</div>
+<div class="bg-decoration flower flower2">❀</div>
+<div class="bg-decoration flower flower3">✿</div>
+<div class="bg-decoration flower flower4">❀</div>
+
+
+<!-- =====================================================
+     BACKGROUND CHARACTERS
+===================================================== -->
+
+<div class="background-character character-1">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<div class="background-character character-2 waving">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<div class="background-character character-3 sleepy">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<div class="background-character character-4">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="mini-heart">♥</div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<div class="background-character character-5 wink">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<div class="background-character character-6">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<div class="background-character character-7">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<div class="background-character character-8">
+
+    <div class="chibi">
+
+        <div class="chibi-head">
+
+            <div class="chibi-ear left"></div>
+            <div class="chibi-ear right"></div>
+
+            <div class="chibi-eye left"></div>
+            <div class="chibi-eye right"></div>
+
+            <div class="chibi-blush left"></div>
+            <div class="chibi-blush right"></div>
+
+            <div class="chibi-mouth"></div>
+
+        </div>
+
+        <div class="chibi-body"></div>
+
+        <div class="chibi-arm left"></div>
+        <div class="chibi-arm right"></div>
+
+        <div class="chibi-foot left"></div>
+        <div class="chibi-foot right"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     FLOATING HEARTS
+===================================================== -->
+
+<div class="floating-heart heart1">♡</div>
+<div class="floating-heart heart2">♡</div>
+<div class="floating-heart heart3">♡</div>
+<div class="floating-heart heart4">♡</div>
+<div class="floating-heart heart5">♡</div>
+<div class="floating-heart heart6">♡</div>
+<div class="floating-heart heart7">♡</div>
+<div class="floating-heart heart8">♡</div>
+
+
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
+
+<div class="password-screen" id="passwordScreen">
+
+    <div class="password-heart">
+        ♡
+    </div>
+
+    <h1>
+        Our little secret...
+    </h1>
+
+    <div class="password-subtitle">
+        Only you know the password ♡
+    </div>
+
+    <div class="password-hint">
+        Hint: To the day it all started.
+    </div>
+
+
+    <div class="lock-container">
+
+        <div class="lock-shackle"></div>
+
+        <div class="lock-body">
+
+            <div class="keyhole"></div>
+
+        </div>
+
+    </div>
+
+
+    <input
+        type="password"
+        id="passwordInput"
+        class="password-input"
+        placeholder="Password"
+        maxlength="4"
+        inputmode="numeric"
+        autocomplete="off"
+    >
+
+
+    <button
+        class="password-button"
+        onclick="checkPassword()"
+    >
+        Unlock ♡
+    </button>
+
+
+    <div
+        class="wrong-password"
+        id="wrongPassword"
+    >
+        Hmm... that's not it ♡
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     OPENING SCREEN
+===================================================== -->
+
+<div class="opening" id="opening">
+
+    <div class="small-heart">
+        ♡
+    </div>
+
+
+    <h1>
+        To the prettiest girl
+    </h1>
+
+
+    <div class="subtitle">
+        Tap the envelope to open ♡
+    </div>
+
+
+    <div
+        class="envelope-wrapper"
+        id="envelope"
+        onclick="openLetter()"
+    >
+
+        <div class="envelope">
+
+
+            <!-- RIBBON -->
+
+            <div class="ribbon-vertical"></div>
+
+            <div class="ribbon-bow">
+
+                <div class="ribbon-loop left"></div>
+                <div class="ribbon-loop right"></div>
+
+                <div class="ribbon-knot"></div>
+
+            </div>
+
+
+            <!-- LETTER -->
+
+            <div class="inside-letter">
+
+                <p class="letter-greeting">
+                    Morning Rina🥰!!!
+                </p>
+
+
+                <p>
+                    Can you believe it’s already been a month since we started dating?
+                    Time really flies when I’m with you. Honestly, these past few weeks
+                    with you have made me so incredibly happy, and I genuinely feel so
+                    lucky to have you in my life.
+                </p>
+
+
+                <p>
+                    I love all our little conversations, the silly moments we share,
+                    and even the smallest things you do that somehow manage to make my day.
+                    I know it’s only been a month, but I already cherish what we have so much.
+                    I can’t wait to make more memories with you, laugh with you, and get to
+                    know you even more. I hope you know how special you are to me and how
+                    much you mean to me.
+                </p>
+
+
+                <p>
+                    Thank you for being you, for making me smile, and for making this past
+                    month so special. I really hope this is just the beginning of many more
+                    months, or potentially even years together 👀👀.
+                </p>
+
+
+                <p>
+                    I love you sososooooo much, pretty girl.
+                    You mean the absolute world to me, my love 💗💗
+                </p>
+
+
+                <p class="letter-signature">
+                    From your loving, caring, loyal, sigma, auraful,
+                    handsome catboy boyfriend,<br>
+                    Victor ♡
+                </p>
+
+            </div>
+
+
+            <!-- FLAP -->
+
+            <div class="flap"></div>
+
+
+            <!-- STAMP -->
+
+            <div class="for-you">
+                FOR YOU ♡
+            </div>
+
+
+            <!-- SEAL -->
+
+            <div class="seal">
+                ♥
+            </div>
+
+
+            <!-- HEART EXPLOSION -->
+
+            <div class="heart-burst">
+
+                <div class="burst-heart">♡</div>
+                <div class="burst-heart">♡</div>
+                <div class="burst-heart">♡</div>
+                <div class="burst-heart">♡</div>
+                <div class="burst-heart">♥</div>
+                <div class="burst-heart">♡</div>
+                <div class="burst-heart">♡</div>
+                <div class="burst-heart">♥</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="open-letter-button"
+        onclick="openLetter()"
+    >
+        Open My Letter ♡
+    </button>
+
+</div>
+
+
+<script>
+
+const CORRECT_PASSWORD = "0905";
+
+
+function checkPassword() {
+
+    const input =
+        document.getElementById(
+            "passwordInput"
+        );
+
+    const passwordScreen =
+        document.getElementById(
+            "passwordScreen"
+        );
+
+    const wrongPassword =
+        document.getElementById(
+            "wrongPassword"
+        );
+
+    const opening =
+        document.getElementById(
+            "opening"
+        );
+
+
+    if (
+        input.value ===
+        CORRECT_PASSWORD
+    ) {
+
+        wrongPassword.classList.remove(
+            "show"
+        );
+
+        passwordScreen.classList.add(
+            "unlocking"
+        );
+
+
+        setTimeout(() => {
+
+            passwordScreen.style.display =
+                "none";
+
+            opening.classList.add(
+                "visible"
+            );
+
+        }, 850);
+
+    }
+
+    else {
+
+        input.classList.remove(
+            "shake"
+        );
+
+        void input.offsetWidth;
+
+        input.classList.add(
+            "shake"
+        );
+
+        wrongPassword.classList.add(
+            "show"
+        );
+
+        input.value = "";
+
+        input.focus();
+
+    }
+
+}
+
+
+document
+    .getElementById("passwordInput")
+    .addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                checkPassword();
+
+            }
+
+        }
+    );
+
+
+function openLetter() {
+
+    const envelope =
+        document.getElementById(
+            "envelope"
+        );
+
+
+    if (
+        envelope.classList.contains(
+            "opened"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    envelope.classList.add(
+        "opened"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
